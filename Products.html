@@ -1,0 +1,149 @@
+<DOC html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ForgeByte — Products</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Name: [Your Full Name] | ID: [Your Student ID] -->
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">Forge<span>Byte</span><small>PC PARTS &amp; BUILDS</small></div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products <span id="cart-badge">0</span></a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section>
+      <div class="section-heading">
+        <h2>Component Catalog</h2>
+        <div class="rule"></div>
+      </div>
+      <p>
+        Every component below is in stock and ready to ship within 24 hours. Prices
+        reflect single-unit retail; contact us for bulk or system-integrator pricing.
+      </p>
+      <p>
+        Click "Add to Build" on any part to track it in your session cart, shown as
+        a live counter in the navigation bar above.
+      </p>
+      <p id="product-msg" style="font-family: var(--font-mono); font-size: 0.9rem; min-height: 1.2em;"></p>
+
+      <div class="filter-bar">
+        <span class="chip">GPU</span>
+        <span class="chip">CPU</span>
+        <span class="chip">Motherboard</span>
+        <span class="chip">Memory</span>
+        <span class="chip">Storage</span>
+        <span class="chip">Cooling</span>
+      </div>
+
+      <!-- PRODUCT GRID — uses display: grid -->
+      <div class="product-grid">
+
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1591199522763-2e3a2b7128c4?auto=format&fit=crop&w=500&q=80" alt="Graphics card" />
+          <div class="product-body">
+            <p class="spec-label">GPU</p>
+            <h3>Radeon Vector RX 7800</h3>
+            <p>16GB GDDR6, ray tracing support, triple-fan cooling for 1440p and 4K gaming.</p>
+            <span class="price">$549.00</span>
+            <button class="btn btn-secondary" onclick="addToBuild('Radeon Vector RX 7800')">Add to Build</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1555617981-dac3880eac6e?auto=format&fit=crop&w=500&q=80" alt="Computer processor chip" />
+          <div class="product-body">
+            <p class="spec-label">CPU</p>
+            <h3>CoreForge X9 12-Core</h3>
+            <p>12-core / 24-thread desktop processor built for gaming and heavy multitasking.</p>
+            <span class="price">$389.00</span>
+            <button class="btn btn-secondary" onclick="addToBuild('CoreForge X9 12-Core')">Add to Build</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1591488320449-011701bb6704?auto=format&fit=crop&w=500&q=80" alt="Motherboard" />
+          <div class="product-body">
+            <p class="spec-label">Motherboard</p>
+            <h3>ByteBoard Z790 ATX</h3>
+            <p>DDR5 support, PCIe 5.0 slots, and onboard Wi-Fi 6E for a future-proof build.</p>
+            <span class="price">$219.00</span>
+            <button class="btn btn-secondary" onclick="addToBuild('ByteBoard Z790 ATX')">Add to Build</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1562976540-1502c2145186?auto=format&fit=crop&w=500&q=80" alt="RAM memory sticks" />
+          <div class="product-body">
+            <p class="spec-label">Memory</p>
+            <h3>RapidRAM DDR5 32GB Kit</h3>
+            <p>2x16GB, 6000MHz kit with low-profile heat spreaders for tight cases.</p>
+            <span class="price">$129.00</span>
+            <button class="btn btn-secondary" onclick="addToBuild('RapidRAM DDR5 32GB Kit')">Add to Build</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=500&q=80" alt="Solid state drive" />
+          <div class="product-body">
+            <p class="spec-label">Storage</p>
+            <h3>SwiftDisk NVMe 2TB</h3>
+            <p>PCIe 4.0 SSD rated for 7,000MB/s reads — near-instant game and OS loading.</p>
+            <span class="price">$159.00</span>
+            <button class="btn btn-secondary" onclick="addToBuild('SwiftDisk NVMe 2TB')">Add to Build</button>
+          </div>
+        </div>
+
+        <div class="product-card">
+          <img src="https://images.unsplash.com/photo-1587202372634-32705e3bf49c?auto=format&fit=crop&w=500&q=80" alt="CPU liquid cooler" />
+          <div class="product-body">
+            <p class="spec-label">Cooling</p>
+            <h3>ChillFlow 240mm AIO</h3>
+            <p>Dual 120mm PWM fans with a quiet pump for sustained high-load thermals.</p>
+            <span class="price">$99.00</span>
+            <button class="btn btn-secondary" onclick="addToBuild('ChillFlow 240mm AIO')">Add to Build</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>ForgeByte</h4>
+        <p>Component-first PC hardware, sold by people who build their own rigs too.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <p><a href="products.html">All Components</a></p>
+        <p><a href="contact.html">Custom Build Quote</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Reach Us</h4>
+        <p><a href="contact.html">Contact Support</a></p>
+        <p>Dhaka, Bangladesh</p>
+      </div>
+    </div>
+    <div class="footer-bottom">&copy; 2026 ForgeByte PC Parts. All rights reserved.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
